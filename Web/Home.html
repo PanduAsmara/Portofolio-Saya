@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Pembelajar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #667eea;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #667eea }
+        }
+        
+        .learning-badge {
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-indigo-600">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-indigo-600 transition-colors">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-indigo-600 transition-colors">Tentang</a>
+                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors">Belajar</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors">Kreasi</a>
+                    <a href="#contact" class="text-gray-600 hover:text-indigo-600 transition-colors">Kontak</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center gradient-bg pt-20">
+        <div class="container mx-auto px-6 py-20">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <span class="learning-badge text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 inline-block">
+                        🎓 Masih Belajar
+                    </span>
+                    <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Hai, Saya <span class="text-yellow-300">Frasya Pandu Asmara</span></h1>
+                    <div class="typewriter text-xl md:text-2xl text-white mb-6">
+                        Pelajar Web Development & 3D Design
+                    </div>
+                    <p class="text-white/90 mb-8 text-lg">
+                        Seorang pemula yang bersemangat mempelajari pembuatan website, Blender 3D, dan game development. 
+                        Saya suka mencoba hal-hal baru dan mengeksplorasi dunia kreatif digital!
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#projects" class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Lihat Karya
+                        </a>
+                        <a href="#contact" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                            Chat Saya
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-white/10 rounded-full absolute -top-4 -left-4 animate-pulse"></div>
+                        <div class="w-80 h-80 bg-white/5 rounded-full absolute -bottom-4 -right-4 animate-pulse delay-1000"></div>
+                        <img src="img/WhatsApp Image 2025-08-06 at 20.03.46_bd30b935.jpg" alt="Foto saya belajar" class="relative z-10 rounded-2xl shadow-2xl w-80 h-96 object-cover" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Tentang Saya</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://placehold.co/600x400" alt="Student working on 3D modeling project with Blender software on laptop" class="rounded-2xl shadow-xl w-full" />
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Perjalanan Belajar Saya</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Saya adalah seorang pelajar yang sedang mengeksplorasi dunia kreatif digital. Saat ini saya fokus 
+                        mempelajari pembuatan website, modeling 3D dengan Blender, dan dasar-dasar game development.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Saya sangat menikmati proses belajar dan tidak takut mencoba hal-hal baru. Setiap hari adalah 
+                        kesempatan untuk belajar sesuatu yang baru dan mengasah kemampuan kreatif saya.
+                    </p>
+                    <div class="bg-blue-50 p-6 rounded-2xl mb-6">
+                        <h4 class="font-semibold text-blue-800 mb-3">🔄 Fokus Belajar Saat Ini:</h4>
+                        <ul class="text-blue-700 space-y-2">
+                            <li>• HTML, CSS & JavaScript Dasar</li>
+                            <li>• Pemodelan 3D dengan Blender</li>
+                            <li>• Dasar-dasar Game Development</li>
+                            <li>• UI/UX Design untuk Pemula</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Yang Sedang Saya Pelajari</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4">Masih dalam tahap belajar dan terus berkembang!</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Technical Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-8">Web Development</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">HTML/CSS</span>
+                                <span class="text-gray-600">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-indigo-600 h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">JavaScript</span>
+                                <span class="text-gray-600">10%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-indigo-600 h-2 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Ai Tools</span>
+                                <span class="text-gray-600">35%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-indigo-600 h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Creative Skills -->
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-8">Creative Skills</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Blender 3D</span>
+                                <span class="text-gray-600">40%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 40%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">Game Development (Unity3D dan Godot Game Engine)</span>
+                                <span class="text-gray-600">30%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium text-gray-700">UI/UX Design</span>
+                                <span class="text-gray-600">45%</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-green-600 h-2 rounded-full" style="width: 45%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Karya & Eksperimen</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4">Beberapa project belajar dan eksperimen yang sedang saya kerjakan</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-blue-400 to-purple-500 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-6xl text-white opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Website Pertama</h3>
+                        <p class="text-gray-600 mb-4">Website portfolio sederhana pertama yang saya buat menggunakan HTML, CSS, dan JavaScript.</p>
+                        <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">HTML/CSS</span>
+                        <span class="bg-purple-100 text-purple-800 text-sm px-3 py-1 rounded-full ml-2">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-green-400 to-blue-500 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-cube text-6xl text-white opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Model 3D Sederhana</h3>
+                        <p class="text-gray-600 mb-4">Eksperimen pertama membuat model 3D menggunakan Blender - sebuah karakter kartun sederhana.</p>
+                        <span class="bg-green-100 text-green-800 text-sm px-3 py-1 rounded-full">Blender 3D</span>
+                        <span class="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full ml-2">Modeling</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden card-hover">
+                    <div class="h-48 bg-gradient-to-r from-red-400 to-pink-500 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-gamepad text-6xl text-white opacity-80"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-xl mb-2">Game Sederhana</h3>
+                        <p class="text-gray-600 mb-4">Game platformer 2D pertama yang saya coba buat menggunakan JavaScript dan Canvas.</p>
+                        <span class="bg-red-100 text-red-800 text-sm px-3 py-1 rounded-full">Game Dev</span>
+                        <span class="bg-pink-100 text-pink-800 text-sm px-3 py-1 rounded-full ml-2">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Ayo Kolaborasi!</h2>
+                <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+                <p class="text-gray-600 mt-4">Saya selalu terbuka untuk berbagi pengalaman belajar dan kolaborasi</p>
+            </div>
+
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-lg">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 mb-2">Nama</label>
+                        <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Nama kamu">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="email@contoh.com">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 mb-2">Pesan</label>
+                        <textarea rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent" placeholder="Tulis pesanmu di sini..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full gradient-bg text-white py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
+                        Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h3 class="text-2xl font-bold mb-6">Salam Pelajar</h3>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="#" class="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center hover:bg-pink-600 transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-gray-400">© 2025 Frasya Pandu Asmara. Semua hak cipta dilindungi.</p>
+                <p class="text-gray-400 mt-2">Dibuat dengan ❤️ dan banyak ☕</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation for skill bars
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            menuBtn.addEventListener('click', () => {
+                alert('Menu mobile akan ditampilkan di sini!');
+            });
+        });
+    </script>
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDvEL_rxgXYqJeAJE4JJrYdFjrtiEz8lzI",
+    authDomain: "portofolio-pandu.firebaseapp.com",
+    projectId: "portofolio-pandu",
+    storageBucket: "portofolio-pandu.firebasestorage.app",
+    messagingSenderId: "459235196802",
+    appId: "1:459235196802:web:b363767bdf84ecc968199b",
+    measurementId: "G-ZJB9MJHW93"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+</body>
+</html>
